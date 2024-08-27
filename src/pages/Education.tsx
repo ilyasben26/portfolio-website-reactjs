@@ -1,3 +1,16 @@
+import Academics from "../components/Academics";
+import EducationPhilosophy from "../components/EducationPhilosophy";
+import Publications from "../components/Publications";
+import ThmBadge from "../components/ThmBadge";
+
 export default function Education() {
-    return <h1>Education Page</h1>;
+    return (
+        <div className="rounded-xl bg-white p-2 shadow-md max-w-xl mx-auto mt-2 mb-16 ">
+            <EducationPhilosophy />
+            <Academics />
+            <ThmBadge />
+            <Publications />
+
+        </div >
+    );
 }

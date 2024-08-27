@@ -1,3 +1,8 @@
 export default function Experience() {
-    return <h1>Experience Page</h1>;
+    return (
+        <div className="rounded-xl bg-white p-2 shadow-md max-w-xl mx-auto mt-2 mb-16 ">
+
+
+        </div >
+    );
 }

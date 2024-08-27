@@ -12,8 +12,7 @@ const Profile = () => {
                     <h1 className="text-3xl font-primaryBold">Ilyas Benyamna</h1>
                     <br />
                     <p className="text-sm text-justify">
-                        I like to learn new things every day
-                        and work on fun personal projects to apply what I learned.
+                        As an all-rounder in anything IT-related,
                         <br />
                         I am currently looking for opportunities in Cybersecurity,
                         Software Engineering, Cloud, Data Engineering, and DevOps.
