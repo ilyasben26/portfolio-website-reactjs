@@ -7,7 +7,7 @@ import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col font-primaryRegular">
+    <div className="bg-gray-100 min-h-screen flex flex-col font-primaryRegular ">
       <Navbar />
       <main className="flex-grow pt-20">
         <Routes>
