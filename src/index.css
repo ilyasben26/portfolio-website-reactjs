@@ -15,21 +15,13 @@
     url('./assets/fonts/RobotoMono-Bold.ttf') format("truetype");
 }
 
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
+/* Always show scrollbar for Chrome, Safari, and Opera */
+html {
+  overflow-y: scroll;
 }
 
-/* Hide scrollbar for Firefox */
+/* Always show scrollbar for Firefox */
 body {
-  scrollbar-width: none;
-  /* Firefox */
-}
-
-/* Ensure the document height doesn't restrict scrolling */
-html,
-body {
-  overflow: auto;
-  height: 100%;
+  scrollbar-width: thin;
+  /* or use 'auto' for the default width */
 }
