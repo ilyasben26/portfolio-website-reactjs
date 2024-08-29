@@ -5,7 +5,7 @@ const Certifications = () => {
         {
             id: 1,
             title: "AWS Certified Solutions Architect - Associate",
-            subtitle: "Credential ID: 6SCMR3BJYMV11HS5",
+            description: "Credential ID: 6SCMR3BJYMV11HS5",
             imageUrl: "/images/certifications/sa-cert.png",
             verifyLink: "https://www.credly.com/badges/3246c6c4-2023-4d0a-981d-f7396bd97a5e/public_url"
         },
@@ -53,9 +53,9 @@ const Certifications = () => {
                         <h2 className="text-l font-semibold text-gray-700">{cert.title}</h2>
                         <p className="text-sm text-gray-600">{cert.subtitle}</p>
                     </div>
-                    <a href={cert.verifyLink} target="_blank" rel="noopener noreferrer">
+                    <a className="ml-auto" href={cert.verifyLink} target="_blank" rel="noopener noreferrer">
                         <button
-                            className="ml-auto text-gray-400 hover:text-gray-700 relative bg-white text-xs py-2 px-4 rounded-lg flex items-center border-2 border-gray-300 hover:border-gray-500 transition-all duration-300 hover:shadow-lg"
+                            className=" text-gray-400 hover:text-gray-700 relative bg-white text-xs py-2 px-4 rounded-lg flex items-center border-2 border-gray-300 hover:border-gray-500 transition-all duration-300 hover:shadow-lg"
                         >
                             Verify
                         </button>

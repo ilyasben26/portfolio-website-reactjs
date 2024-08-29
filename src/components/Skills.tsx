@@ -67,11 +67,8 @@ const Skills = () => {
                     <span className="w-2 h-2 bg-gray-300 rounded-full mr-4"></span>
                     <h1 className="text-lg">Skills</h1>
                     <div className="relative ml-1 mb-3 group">
-
-                        <IoInformationCircleSharp />
-
-
-                        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 bg-black text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <IoInformationCircleSharp className="cursor-pointer" />
+                        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-48 bg-black text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
                             These are all technologies that I used extensively for personal projects, during my career or during university.
                         </div>
                     </div>
