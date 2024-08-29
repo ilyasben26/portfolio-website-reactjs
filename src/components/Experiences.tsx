@@ -15,31 +15,31 @@ const Experiences = () => {
     ];
 
     return (
-        <div className='p-6 bg-gray-100 rounded-xl'>
+        <div className='p-6 bg-gray-100 dark:bg-[#323131] rounded-xl'>
             <div className="flex justify-between items-center">
-                <div className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-gray-300 rounded-full mr-4"></span>
+                <div className="flex items-center text-gray-600 dark:text-neutral-400">
+                    <span className="w-2 h-2 bg-gray-300 dark:bg-neutral-500 rounded-full mr-4"></span>
                     <h1 className="text-lg">Career</h1>
                 </div>
 
             </div>
             {experiences.map(experience => (
-                <div key={experience.id} className='bg-white  border-2 rounded-lg my-6 flex items-center p-4 shadow-sm'>
+                <div key={experience.id} className='bg-white  dark:bg-[#3c3a3a] dark:border-[#323131] border-2 rounded-lg my-6 flex items-center p-4 shadow-sm'>
                     <img
                         src={experience.imageUrl}
                         alt={experience.company}
-                        className="w-20 h-20 object-scale-down rounded-md mr-4"
+                        className="dark:bg-white dark:p-2 w-20 h-20 object-scale-down rounded-md mr-4"
                     />
                     <div>
-                        <h2 className="text-l font-semibold text-gray-700">{experience.company}</h2>
-                        <p className="text-sm text-gray-600">{experience.subtitle}</p>
+                        <h2 className="text-l font-semibold text-gray-700 dark:text-white">{experience.company}</h2>
+                        <p className="text-sm text-gray-600 dark:text-neutral-400">{experience.subtitle}</p>
                         <div className="flex items-start mt-1">
                             <IoLocationOutline />
-                            <p className="ml-1 text-xs text-gray-600">{experience.location}</p>
+                            <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.location}</p>
                         </div>
                         <div className="flex items-start mt-1">
                             <MdOutlineCalendarMonth />
-                            <p className="ml-1 text-xs text-gray-600">{experience.duration}</p>
+                            <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.duration}</p>
                         </div>
                     </div>
 

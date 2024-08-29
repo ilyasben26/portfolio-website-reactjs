@@ -48,7 +48,7 @@ export default function Navbar({ toggleDarkMode, theme }: NavbarProps) {
 
     return (
         <nav
-            className={`bg-white dark:bg-neutral-800 dark:border-white mt-4 p-1.5 flex justify-between items-center shadow-md max-w-xl rounded-xl mx-auto fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
+            className={`bg-white dark:bg-neutral-800  mt-4 p-1.5 flex justify-between items-center shadow-md max-w-xl rounded-xl mx-auto fixed top-0 left-0 right-0 z-10 transition-transform duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}
         >
             <div className="flex space-x-2">
                 <NavbarButton

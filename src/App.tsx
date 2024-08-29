@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-neutral-900 min-h-screen flex flex-col font-primaryRegular ">
+    <div className="bg-gray-100 dark:bg-neutral-900 dark:text-white min-h-screen flex flex-col font-primaryRegular ">
       <Navbar toggleDarkMode={toggleDarkMode} theme={theme} />
       <main className="flex-grow pt-20">
         <Routes>

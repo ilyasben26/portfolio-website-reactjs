@@ -13,6 +13,11 @@ export default {
       },
     },
   },
+  variants: {
+    extend: {
+      scrollbar: ['dark'],
+    },
+  },
   plugins: [],
 }
 

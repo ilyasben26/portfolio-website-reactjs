@@ -27,10 +27,10 @@ const links = [
 
 const ContactMe = () => {
     return (
-        <div className='p-6 bg-gray-100 rounded-xl'>
+        <div className='p-6 bg-gray-100 dark:bg-[#323131] rounded-xl'>
             <div className="flex justify-between items-center">
-                <div className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-gray-300 rounded-full mr-4"></span>
+                <div className="flex items-center text-gray-600 dark:text-neutral-400">
+                    <span className="w-2 h-2 bg-gray-300  dark:bg-neutral-500 rounded-full mr-4"></span>
                     <h1 className="text-lg">Contact Me</h1>
                 </div>
                 <div className="flex space-x-4">
@@ -40,7 +40,7 @@ const ContactMe = () => {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <div className="bg-white p-3 rounded-full border-2 hover:border-gray-500 transition-all duration-300 hover:shadow-lg">
+                                <div className="bg-white dark:bg-[#3c3a3a] dark:border-[#323131] p-3 rounded-full border-2 hover:border-gray-500 transition-all duration-300 hover:shadow-lg">
 
                                     {link.icon}
                                 </div></a>

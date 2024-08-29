@@ -25,3 +25,8 @@ body {
   scrollbar-width: thin;
   /* or use 'auto' for the default width */
 }
+
+html,
+body {
+  overscroll-behavior: none;
+}

@@ -61,10 +61,10 @@ const Skills = () => {
     };
 
     return (
-        <div className='p-6 mt-2 bg-gray-100 rounded-xl'>
+        <div className='p-6 mt-2 bg-gray-100 dark:bg-[#323131] rounded-xl'>
             <div className="flex justify-between items-center">
-                <div className="flex items-center text-gray-600">
-                    <span className="w-2 h-2 bg-gray-300 rounded-full mr-4"></span>
+                <div className="flex items-center text-gray-600 dark:text-neutral-400">
+                    <span className="w-2 h-2 bg-gray-300 dark:bg-neutral-500 rounded-full mr-4"></span>
                     <h1 className="text-lg">Skills</h1>
                     <div className="relative ml-1 mb-3 group">
                         <IoInformationCircleSharp className="cursor-pointer" />
@@ -78,16 +78,16 @@ const Skills = () => {
                 {skillsData.skills.map((skillCategory, index) => (
                     <div key={index} className="mb-4">
                         <div
-                            className="flex justify-between items-center cursor-pointer bg-white p-2 rounded-md shadow-sm border-2 hover:border-gray-500 transition-all duration-300 hover:shadow-lg"
+                            className="flex justify-between items-center cursor-pointer bg-white dark:bg-[#3c3a3a] dark:border-[#323131] p-2 rounded-md shadow-sm border-2 hover:border-gray-500 transition-all duration-300 hover:shadow-lg"
                             onClick={() => toggleCategory(skillCategory.category)}
                         >
-                            <h2 className="text-md font-medium text-gray-700">{skillCategory.category}</h2>
+                            <h2 className="text-md font-medium text-gray-700 dark:text-white">{skillCategory.category}</h2>
                             <span className={`transform transition-transform ${openCategory === skillCategory.category ? 'rotate-180' : 'rotate-0'}`}>
                                 ▼
                             </span>
                         </div>
                         {openCategory === skillCategory.category && (
-                            <ul className="mt-2 pl-4 list-disc list-inside text-gray-600">
+                            <ul className="mt-2 pl-4 list-disc list-inside text-gray-600 dark:text-neutral-400">
                                 {skillCategory.list.map((skill, skillIndex) => (
                                     <li key={skillIndex}>{skill}</li>
                                 ))}
