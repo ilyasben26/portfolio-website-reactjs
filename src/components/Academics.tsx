@@ -15,7 +15,7 @@ const Academics = () => {
     ];
 
     return (
-        <div className='p-6 mt-2 bg-gray-100 rounded-xl'>
+        <div className='p-6 mt-2 bg-gray-100  rounded-xl'>
             <div className="flex justify-between items-center">
                 <div className="flex items-center text-gray-600">
                     <span className="w-2 h-2 bg-gray-300 rounded-full mr-4"></span>
