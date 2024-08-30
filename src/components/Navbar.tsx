@@ -6,6 +6,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { useNavigate, useLocation } from 'react-router-dom';
 import NavbarButton from './NavbarButton';
+import LanguageList from './LanguageList';
 
 interface NavbarProps {
     toggleDarkMode: () => void;
@@ -77,6 +78,7 @@ export default function Navbar({ toggleDarkMode, theme }: NavbarProps) {
                 />
             </div>
             <div className='flex items-center'>
+                <LanguageList />
                 <button
                     className='mr-3 p-1 text-neutral-400 hover:text-black dark:text-neutral-500 dark:hover:text-white rounded-full relative group hover:bg-neutral-200 dark:hover:bg-neutral-700 '
                     onClick={toggleDarkMode}

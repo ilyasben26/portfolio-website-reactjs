@@ -1,6 +1,7 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiBugcrowd } from "react-icons/si";
 import { IoMail } from "react-icons/io5";
+import { useTranslation } from '../contexts/TranslationContext';
 
 const links = [
     {
@@ -26,12 +27,14 @@ const links = [
 ];
 
 const ContactMe = () => {
+    const { translate } = useTranslation();
+
     return (
         <div className='p-6 bg-gray-100 dark:bg-[#323131] rounded-xl'>
             <div className="flex justify-between items-center">
                 <div className="flex items-center text-gray-600 dark:text-neutral-400">
                     <span className="w-2 h-2 bg-gray-300  dark:bg-neutral-500 rounded-full mr-4"></span>
-                    <h1 className="text-lg">Contact Me</h1>
+                    <h1 className="text-lg">Contact Me {translate('greeting')}</h1>
                 </div>
                 <div className="flex space-x-4">
                     {links.map(link => (
