@@ -34,7 +34,7 @@ const ContactMe = () => {
             <div className="flex justify-between items-center">
                 <div className="flex items-center text-gray-600 dark:text-neutral-400">
                     <span className="w-2 h-2 bg-gray-300  dark:bg-neutral-500 rounded-full mr-4"></span>
-                    <h1 className="text-lg">Contact Me {translate('greeting')}</h1>
+                    <h1 className="text-lg">{translate('navbar.contact')}</h1>
                 </div>
                 <div className="flex space-x-4">
                     {links.map(link => (

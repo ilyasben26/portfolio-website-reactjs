@@ -1,24 +1,23 @@
+import { useTranslation } from '../contexts/TranslationContext';
 
 
 const Profile = () => {
+    const { translate } = useTranslation();
     return (
         <div>
             <div className="m-5 flex items-center text-gray-600 dark:text-neutral-400">
                 <span className="w-2 h-2 bg-gray-300 dark:bg-neutral-500 rounded-full mr-4"></span>
-                <h1 className="text-xl">Developer</h1>
+                <h1 className="text-xl">{translate('about-me.occupation')}</h1>
             </div>
-            <div className="m-3 flex flex-col-reverse md:flex-row items-center">
-                <div>
-                    <h1 className="text-3xl font-primaryBold">Ilyas Benyamna</h1>
+            <div className="m-3  flex flex-col-reverse md:flex-row items-center">
+                <div className='md:w-[400px]'>
+                    <h1 className="text-3xl font-primaryBold">{translate('about-me.name')}</h1>
                     <br />
                     <p className="text-sm text-justify dark:text-neutral-300">
-                        As an all-rounder in anything IT-related,
-                        <br />
-                        I am currently looking for opportunities in Cybersecurity,
-                        Software Engineering, Cloud, Data Engineering, and DevOps.
+                        {translate('about-me.description')}
                     </p>
                 </div>
-                <div className="md:w-2/3 md:pl-10 flex justify-center">
+                <div className="md:w-1/3 md:pl-10 flex justify-center">
                     <img
                         src="/images/profilepic.jpg"
                         alt="Ilyas Benyamna"

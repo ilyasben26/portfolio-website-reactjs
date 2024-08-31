@@ -1,5 +1,188 @@
 {
-    "greeting": "Hello",
-    "welcome": "Welcome to our application",
-    "logout": "Logout"
+    "navbar": {
+        "contact": "Contact",
+        "about-me": "About Me",
+        "education": "Education",
+        "experience": "Experience",
+        "projects": "Projects"
+    },
+    "about-me": {
+        "occupation": "Developer",
+        "name": "Ilyas Benyamna",
+        "description": "As an all-rounder in anything IT-related, I am currently looking for opportunities in Cybersecurity, SoftwareEngineering, Cloud, Data Engineering, and DevOps.",
+        "certifications": {
+            "name": "Certifications",
+            "view-all": "View All",
+            "verify": "Verify",
+            "list": [
+                {
+                    "id": 1,
+                    "title": "AWS Certified Solutions Architect - Associate",
+                    "subtitle": "ID: 6SCMR3BJYMV11HS5",
+                    "imageUrl": "/images/certifications/sa-cert.png",
+                    "verifyLink": "https://www.credly.com/badges/3246c6c4-2023-4d0a-981d-f7396bd97a5e/public_url"
+                },
+                {
+                    "id": 2,
+                    "title": "AWS Certified Cloud Practitioner",
+                    "subtitle": "ID: LYXHWZCJ5MFEQZKT",
+                    "imageUrl": "/images/certifications/cpf-cert.png",
+                    "verifyLink": "https://www.credly.com/badges/ca3cafd4-08ee-4dde-888f-eab6c694b749/public_url"
+                },
+                {
+                    "id": 3,
+                    "title": "Google Cybersecurity Certificate",
+                    "subtitle": "",
+                    "imageUrl": "/images/certifications/gcsc-cert.png",
+                    "verifyLink": "https://www.credly.com/badges/f5853330-463e-4ea8-a524-5558f76074f2"
+                }
+            ]
+        },
+        "languages": {
+            "name": "Languages",
+            "list": [
+                {
+                    "name": "English",
+                    "proficiency": "Fluent"
+                },
+                {
+                    "name": "German",
+                    "proficiency": "telc B1"
+                },
+                {
+                    "name": "French",
+                    "proficiency": "Native"
+                },
+                {
+                    "name": "Arabic",
+                    "proficiency": "Native"
+                }
+            ]
+        },
+        "skills": {
+            "name": "Skills",
+            "info": "These are all technologies that I used extensively for personal projects, during my career or during university.",
+            "list": [
+                {
+                    "category": "Programming Languages",
+                    "list": [
+                        "JavaScript",
+                        "TypeScript",
+                        "Java",
+                        "Python",
+                        "SQL",
+                        "HTML",
+                        "CSS",
+                        "C/C++",
+                        "Rust"
+                    ]
+                },
+                {
+                    "category": "Frameworks",
+                    "list": [
+                        "Spring Boot",
+                        "Flutter",
+                        "React",
+                        "Tailwind CSS"
+                    ]
+                },
+                {
+                    "category": "Cloud",
+                    "list": [
+                        "Amazon Web Services (AWS)",
+                        "Docker",
+                        "Terraform"
+                    ]
+                },
+                {
+                    "category": "Data Engineering",
+                    "list": [
+                        "Apache Kafka",
+                        "Apache Spark",
+                        "Apache Zookeeper",
+                        "Streamlit",
+                        "SQL"
+                    ]
+                },
+                {
+                    "category": "Cybersecurity",
+                    "list": [
+                        "Splunk SIEM",
+                        "Wireshark",
+                        "Burp Suite",
+                        "NMAP",
+                        "Metasploit",
+                        "sqlmap"
+                    ]
+                }
+            ]
+        },
+        "reach-out": "Want to reach out?"
+    },
+    "education": {
+        "name": "Education",
+        "description": "I believe that education and learning should be a lifelong commitment, much like the principle of compound effect — small, consistent efforts lead to significant growth over time. To embody this philosophy, I try to make learning a daily habit. Whether through personal projects, engaging with IT-related content on YouTube, or exploring platforms like TryHackMe, I continually strive to expand my knowledge and skills.",
+        "university": {
+            "name": "University",
+            "list": [
+                {
+                    "id": 1,
+                    "university": "Constructor University Bremen / Jacobs University Bremen",
+                    "degree": "Bachelor of Science in Computer Science",
+                    "location": "Bremen, Germany",
+                    "duration": "2020 - 2023",
+                    "description": "",
+                    "imageUrl": "/images/education/cub-logo.png"
+                }
+            ]
+        },
+        "publications": {
+            "name": "Publications",
+            "list": [
+                {
+                    "id": 1,
+                    "title": "Bachelor Thesis in Computer Science",
+                    "subtitle": "Subject: Object detection and semantic annotation from 3D images of digital twin assets for transport infrastructure management using machine learning",
+                    "readLink": "https://github.com/ilyasben26/Bachelor-Thesis-Ilyas-2023/blob/main/latex%20files/Bachelor%20Thesis.pdf"
+                }
+            ],
+            "read": "Read"
+        }
+    },
+    "experience": {
+        "name": "Experience",
+        "career": {
+            "name": "Career",
+            "list": [
+                {
+                    "id": 1,
+                    "company": "KPMG Deutschland",
+                    "subtitle": "Software Developer / Consultant (Working Student & Intern)",
+                    "location": "Bremen, Germany",
+                    "duration": "March 2022 - September 2023",
+                    "description": "",
+                    "imageUrl": "/images/experiences/KPMG-logo.png"
+                }
+            ]
+        }
+    },
+    "projects": {
+        "name": "Projects",
+        "list": [
+            {
+                "id": 1,
+                "title": "Ilyas-Recon",
+                "description": "A comprehensive reconnaissance tool designed for subdomain enumeration, DNS validation, import/export of subdomains, and backup operations.",
+                "imageUrl": "/images/projects/ilyas-recon.png",
+                "verifyLink": "https://github.com/ilyasben26/ilyas-recon"
+            },
+            {
+                "id": 2,
+                "title": "anmeldung-jaeger.com",
+                "description": "A fully serverless solution for checking the availability of Wohnungsanmeldung appointments throughout Germany using a web scraper made in Python.",
+                "imageUrl": "/images/projects/aj.png",
+                "verifyLink": "https://github.com/ilyasben26/aws-anmeldung-jaeger-terraform"
+            }
+        ]
+    }
 }

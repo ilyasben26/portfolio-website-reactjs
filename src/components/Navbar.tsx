@@ -7,6 +7,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from 'react-icons/md';
 import { useNavigate, useLocation } from 'react-router-dom';
 import NavbarButton from './NavbarButton';
 import LanguageList from './LanguageList';
+import { useTranslation } from '../contexts/TranslationContext';
 
 interface NavbarProps {
     toggleDarkMode: () => void;
@@ -18,6 +19,7 @@ export default function Navbar({ toggleDarkMode, theme }: NavbarProps) {
     const [lastScrollTop, setLastScrollTop] = useState(0);
     const navigate = useNavigate();
     const location = useLocation();
+    const { translate } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,25 +56,25 @@ export default function Navbar({ toggleDarkMode, theme }: NavbarProps) {
             <div className="flex space-x-2">
                 <NavbarButton
                     icon={FaRegUserCircle}
-                    label="About Me"
+                    label={translate('navbar.about-me')}
                     to="/"
                     isActive={location.pathname === '/'}
                 />
                 <NavbarButton
                     icon={RiGraduationCapLine}
-                    label="Education"
+                    label={translate('navbar.education')}
                     to="/education"
                     isActive={location.pathname === '/education'}
                 />
                 <NavbarButton
                     icon={MdWorkOutline}
-                    label="Experience"
+                    label={translate('navbar.experience')}
                     to="/experience"
                     isActive={location.pathname === '/experience'}
                 />
                 <NavbarButton
                     icon={LuTerminalSquare}
-                    label="Projects"
+                    label={translate('navbar.projects')}
                     to="/projects"
                     isActive={location.pathname === '/projects'}
                 />
@@ -94,7 +96,7 @@ export default function Navbar({ toggleDarkMode, theme }: NavbarProps) {
                     className="bg-black dark:bg-neutral-950 text-white py-2 md:px-4 rounded-lg flex items-center md:text-base text-xs px-3"
                     onClick={handleContactClick}
                 >
-                    Contact Me
+                    {translate('navbar.contact')}
                 </button>
             </div>
         </nav>

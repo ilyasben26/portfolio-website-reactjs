@@ -5,30 +5,37 @@ import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import { useEffect, useState } from "react";
+import LanguageModal from "./components/LanguageModal";
 
 function App() {
-  // Load the theme from localStorage or default to "light"
   const [theme, setTheme] = useState<string>(() => localStorage.getItem("theme") || "light");
+  const [isFirstVisit, setIsFirstVisit] = useState<boolean>(false);
 
   useEffect(() => {
-    // Apply the theme class to the document root
+    // Handle theme switching
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-
-    // Save the theme to localStorage
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  useEffect(() => {
+    // Check if it's the user's first visit
+    const visitedBefore = localStorage.getItem("visitedBefore");
+    if (!visitedBefore) {
+      setIsFirstVisit(true);
+      localStorage.setItem("visitedBefore", "true");
+    }
+  }, []);
+
   const toggleDarkMode = () => {
-    // Toggle between "dark" and "light" themes
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
-    <div className="bg-gray-100 dark:bg-neutral-900 dark:text-white min-h-screen flex flex-col font-primaryRegular ">
+    <div className="bg-gray-100 dark:bg-neutral-900 dark:text-white min-h-screen flex flex-col font-primaryRegular">
       <Navbar toggleDarkMode={toggleDarkMode} theme={theme} />
       <main className="flex-grow pt-20">
         <Routes>
@@ -38,10 +45,9 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </main>
+      {isFirstVisit && <LanguageModal onClose={() => setIsFirstVisit(false)} />}
     </div>
   );
 }
 
 export default App;
-
-

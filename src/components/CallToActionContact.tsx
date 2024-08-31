@@ -1,7 +1,11 @@
+import { useTranslation } from '../contexts/TranslationContext';
+
 const CallToActionContact = () => {
+    const { translate } = useTranslation();
+
     return (
         <div className='p-6 mt-2 text-center'>
-            <h1 className="text-4xl">Want to reach out?</h1>
+            <h1 className="text-4xl">{translate('about-me.reach-out')}</h1>
             <div className="flex justify-center mt-2">
                 <svg
                     version="1.1"

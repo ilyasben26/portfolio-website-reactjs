@@ -1,25 +1,17 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineCalendarMonth } from "react-icons/md";
+import { useTranslation } from '../contexts/TranslationContext';
 
 const Academics = () => {
-    const academics = [
-        {
-            id: 1,
-            university: `Constructor University Bremen /\nJacobs University Bremen`,
-            degree: "Bachelor of Science in Computer Science",
-            location: "Bremen, Germany",
-            duration: "2020 - 2023",
-            description: "",
-            imageUrl: "/images/education/cub-logo.png"
-        }
-    ];
+    const { translate } = useTranslation();
+    const academics = translate('education.university.list');
 
     return (
         <div className='p-6 mt-2 bg-gray-100 dark:bg-[#323131] rounded-xl'>
             <div className="flex justify-between items-center">
                 <div className="flex items-center text-gray-600  dark:text-neutral-400">
                     <span className="w-2 h-2 bg-gray-300 dark:bg-neutral-500 rounded-full mr-4"></span>
-                    <h1 className="text-lg">University</h1>
+                    <h1 className="text-lg">{translate('education.university.name')}</h1>
                 </div>
             </div>
             {academics.map(experience => (

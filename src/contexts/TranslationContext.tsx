@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import enTranslations from '../translations/en.json';
 import deTranslations from '../translations/de.json';
 import frTranslations from '../translations/fr.json';
 
 interface Translations {
-    [key: string]: string;
+    [key: string]: any;
 }
 
 interface TranslationContextType {
@@ -27,8 +28,20 @@ export const TranslationProvider: React.FC<{ children: ReactNode }> = ({ childre
         fr: frTranslations,
     };
 
-    const translate = (key: string): string => {
-        return translations[language][key] || key;
+    // Function to translate using nested keys
+    const translate = (key: string): string | string[] | object => {
+        const keys = key.split('.'); // Split key into array of nested keys
+        let result: string | string[] | object = translations[language];
+
+        for (const k of keys) {
+            if (result && typeof result === 'object' && k in result) {
+                result = result[k];
+            } else {
+                return key; // Return the original key if not found
+            }
+        }
+
+        return result;
     };
 
     useEffect(() => {

@@ -1,25 +1,9 @@
-const ProjectsLists = () => {
-    const projects = [
-        {
-            id: 1,
-            title: "Ilyas-Recon",
-            description: `A comprehensive reconnaissance tool 
-            designed for subdomain enumeration, 
-            DNS validation, import/export of subdomains, 
-            and backup operations.`,
-            imageUrl: "/images/projects/ilyas-recon.png",
-            verifyLink: "https://github.com/ilyasben26/ilyas-recon"
-        },
-        {
-            id: 2,
-            title: "anmeldung-jaeger.com",
-            description: `A fully serverless solution for checking the availability of Wohnungsanmeldung
-appointments throughout Germany using a web scraper made in Python.`,
-            imageUrl: "/images/projects/aj.png",
-            verifyLink: "https://github.com/ilyasben26/aws-anmeldung-jaeger-terraform"
-        }
+import { useTranslation } from '../contexts/TranslationContext';
 
-    ];
+const ProjectsLists = () => {
+    const { translate } = useTranslation();
+
+    const projects = translate('projects.list');
 
     return (
         <div className='p-6 bg-gray-100 dark:bg-[#323131] rounded-xl'>
