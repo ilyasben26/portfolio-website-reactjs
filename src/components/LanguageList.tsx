@@ -5,13 +5,13 @@ import { RiTranslate } from 'react-icons/ri';
 const LanguageList: React.FC = () => {
     const { setLanguage } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('en'); // Set the default language
+    const [currentLanguage, setCurrentLanguage] = useState('');
 
     const toggleDropdown = () => setIsOpen(!isOpen);
 
     const handleLanguageChange = (lang: string) => {
         setLanguage(lang);
-        setCurrentLanguage(lang); // Update the current language
+        setCurrentLanguage(lang);
         setIsOpen(false);
     };
 
@@ -36,8 +36,8 @@ const LanguageList: React.FC = () => {
                     <button
                         onClick={() => handleLanguageChange('en')}
                         className={`block w-full px-4 py-2 text-left rounded-sm ${currentLanguage === 'en'
-                                ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
-                                : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
+                            ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
+                            : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
                             }`}
                     >
                         English
@@ -45,8 +45,8 @@ const LanguageList: React.FC = () => {
                     <button
                         onClick={() => handleLanguageChange('de')}
                         className={`block w-full px-4 py-2 text-left rounded-sm ${currentLanguage === 'de'
-                                ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
-                                : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
+                            ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
+                            : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
                             }`}
                     >
                         Deutsch
@@ -54,8 +54,8 @@ const LanguageList: React.FC = () => {
                     <button
                         onClick={() => handleLanguageChange('fr')}
                         className={`block w-full px-4 py-2 text-left rounded-sm ${currentLanguage === 'fr'
-                                ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
-                                : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
+                            ? 'bg-neutral-200 dark:bg-neutral-800 text-black dark:text-white'
+                            : 'text-black hover:bg-neutral-200 dark:text-white hover:dark:bg-neutral-800 dark:hover:text-white'
                             }`}
                     >
                         Français

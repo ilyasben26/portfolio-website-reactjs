@@ -23,12 +23,12 @@ const ThmBadge = () => {
             <div className='mt-4 flex justify-center'>
                 <div className='flex flex-col items-center'>
                     <img
-                        src="/public/images/education/thm-profile.png"
+                        src="/images/education/thm-profile.png"
                         alt="TryHackMe Badge"
                         className="object-scale-down"
                     />
                     <img
-                        src="/public/images/education/thm-profile-info-transparent.png"
+                        src="/images/education/thm-profile-info-transparent.png"
                         alt="TryHackMe Badge info"
                         className="object-scale-down w-2/3 mt-2"
                     />
