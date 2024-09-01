@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineCalendarMonth } from "react-icons/md";
+import { useState } from 'react';
 import { useTranslation } from '../contexts/TranslationContext';
 
 const Academics = () => {
@@ -15,41 +15,36 @@ const Academics = () => {
                     <h1 className="text-lg">{translate('education.university.name')}</h1>
                 </div>
             </div>
-            {academics.map(experience => (
-                <AcademicItem key={experience.id} experience={experience} />
-            ))}
-        </div>
-    );
-};
+            {academics.map((experience) => {
+                const [imageLoaded, setImageLoaded] = useState(false);
 
-const AcademicItem = ({ experience }) => {
-    const [isLoading, setIsLoading] = useState(true);
-
-    return (
-        <div className='bg-white dark:bg-[#3c3a3a] dark:border-[#323131] border-2 rounded-lg my-6 flex items-center p-4 shadow-sm'>
-            <div className="relative w-20 h-20 mr-4">
-                {isLoading && (
-                    <div className="w-full h-full bg-gray-300 dark:bg-neutral-500 rounded-md animate-pulse"></div>
-                )}
-                <img
-                    src={experience.imageUrl}
-                    alt={experience.university}
-                    className={`w-20 h-20 object-scale-down rounded-md mr-4 ${isLoading ? 'hidden' : ''}`}
-                    onLoad={() => setIsLoading(false)}
-                />
-            </div>
-            <div>
-                <h2 style={{ whiteSpace: "pre-wrap" }} className="text-l font-semibold text-gray-700 dark:text-white">{experience.university}</h2>
-                <p className="text-sm text-gray-600 dark:text-neutral-400">{experience.degree}</p>
-                <div className="flex items-start mt-1">
-                    <IoLocationOutline />
-                    <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.location}</p>
-                </div>
-                <div className="flex items-start mt-1">
-                    <MdOutlineCalendarMonth />
-                    <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.duration}</p>
-                </div>
-            </div>
+                return (
+                    <div key={experience.id} className='bg-white dark:bg-[#3c3a3a] dark:border-[#323131] border-2 rounded-lg my-6 flex items-center p-4 shadow-sm'>
+                        {!imageLoaded && (
+                            <div className="w-20 h-20 bg-gray-200 dark:bg-neutral-600 animate-pulse rounded-md mr-4"></div>
+                        )}
+                        <img
+                            src={experience.imageUrl}
+                            alt={experience.university}
+                            className={`w-20 h-20 object-scale-down rounded-md mr-4 transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                            onLoad={() => setImageLoaded(true)}
+                            onError={() => setImageLoaded(true)}
+                        />
+                        <div>
+                            <h2 style={{ whiteSpace: "pre-wrap" }} className="text-l font-semibold text-gray-700 dark:text-white">{experience.university}</h2>
+                            <p className="text-sm text-gray-600 dark:text-neutral-400">{experience.degree}</p>
+                            <div className="flex items-start mt-1">
+                                <IoLocationOutline />
+                                <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.location}</p>
+                            </div>
+                            <div className="flex items-start mt-1">
+                                <MdOutlineCalendarMonth />
+                                <p className="ml-1 text-xs text-gray-600 dark:text-neutral-400">{experience.duration}</p>
+                            </div>
+                        </div>
+                    </div>
+                );
+            })}
         </div>
     );
 };
