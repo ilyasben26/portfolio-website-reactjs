@@ -133,6 +133,15 @@
                     "duration": "2020 - 2023",
                     "description": "",
                     "imageUrl": "/images/education/cub-logo.png"
+                },
+                {
+                    "id": 2,
+                    "university": "University of Passau",
+                    "degree": "Master en Informatique",
+                    "location": "Passau, Allemagne",
+                    "duration": "2024 - 2026",
+                    "description": "",
+                    "imageUrl": "/images/education/logo-uni-passau.jpg"
                 }
             ]
         },
