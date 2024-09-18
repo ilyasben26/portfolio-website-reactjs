@@ -29,7 +29,7 @@ const Profile = () => {
                         alt="Ilyas Benyamna"
                         className={`border-4 border-gray-400 dark:border-neutral-700 rounded-full w-52 h-52 mb-5 md:w-52 md:h-52 object-cover shadow-lg transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         onLoad={() => setImageLoaded(true)}
-                        onError={() => setImageLoaded(true)}
+                        onError={() => setImageLoaded(false)}
                     />
                 </div>
             </div>
