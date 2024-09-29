@@ -192,6 +192,13 @@
                 "description": "Une solution entièrement serverless pour vérifier la disponibilité des rendez-vous “Wohnungsanmeldung” dans toute l'Allemagne à l'aide d'un web scraper réalisé en Python.",
                 "imageUrl": "/images/projects/aj.png",
                 "verifyLink": "https://github.com/ilyasben26/aws-anmeldung-jaeger-terraform"
+            },
+            {
+                "id": 3,
+                "title": "URL Shortener",
+                "description": "Un raccourcisseur d'URL réalisé avec NextJS qui traque les visiteurs et les analytics.",
+                "imageUrl": "/images/projects/UShort-Logo.png",
+                "verifyLink": "https://github.com/ilyasben26/url-shortener"
             }
         ]
     }

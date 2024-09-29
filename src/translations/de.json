@@ -192,6 +192,13 @@
                 "description": "Eine vollständig serverlose Lösung zur Überprüfung der Verfügbarkeit von Wohnungsanmeldeterminen in ganz Deutschland.",
                 "imageUrl": "/images/projects/aj.png",
                 "verifyLink": "https://github.com/ilyasben26/aws-anmeldung-jaeger-terraform"
+            },
+            {
+                "id": 3,
+                "title": "URL Shortener",
+                "description": "Ein URL-Verkürzer, der Besucher und Analytics verfolgt.",
+                "imageUrl": "/images/projects/UShort-Logo.png",
+                "verifyLink": "https://github.com/ilyasben26/url-shortener"
             }
         ]
     }
