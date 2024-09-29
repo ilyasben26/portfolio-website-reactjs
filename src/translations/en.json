@@ -81,6 +81,7 @@
                     "category": "Frameworks",
                     "list": [
                         "Spring Boot",
+                        "NextJS",
                         "Flutter",
                         "React",
                         "Tailwind CSS"
